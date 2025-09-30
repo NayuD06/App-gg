@@ -10,6 +10,7 @@ import { register } from '@/routes';
 import { request } from '@/routes/password';
 import { Form, Head } from '@inertiajs/react';
 import { LoaderCircle } from 'lucide-react';
+import googleButton from "@/assets/Web/svg/dark/web_dark_sq_SU.svg"
 
 interface LoginProps {
     status?: string;
@@ -93,6 +94,11 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                 )}
                                 Log in
                             </Button>
+                            <div>
+                                <a href="/auth/google">
+                                    <img src={googleButton} alt="Google sign-in" className="h-15 w-15"/>
+                                </a>
+                            </div>
                         </div>
 
                         <div className="text-center text-sm text-muted-foreground">
